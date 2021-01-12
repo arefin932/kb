@@ -22,72 +22,21 @@ Then, the user pushed the changes to the Git server.
 ====================================================
 $ git push origin
 
+======================= GITHUB - RSA Passwordless access setup ============================
+ 
+ At first create a rsa public/private key pair for your PC
+ # ssh-keygen -t rsa -b 4096 -C "arefin.hossain@gmail.com"
+ 
+ Adding your SSH key to the ssh-agent and start the ssh agent 
+ # eval "$(ssh-agent -s)"
+ 
+Add your SSH private key to the ssh-agent. If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_rsa in the command with the name of your private key file.
 
- 1048  git config --global user.email "Arefin.Hossain@gmail.com"
- 1049  git config --global user.name "Arefin Saikat"
- 1050  git commit -m 'Initial Commit'
- 1051  git log --oneline 
- 1052  git push origin
- 1053  cd ~/.ssh/
- 1054  ls
- 1055  vi id_rsa.pub 
- 1056  cd ~/git/test/test/
- 1057  git add .
- 1058  git push origin
- 1059  git add .
- 1060  git commit
- 1061  git commit -m "Added 1.py"
- 1062  git push origin
- 1063  cd ..
- 1064  ls
- 1065  rm -rf git/
- 1066  cd workspace/
- 1067  ls
- 1068  ls -alh
- 1069  mkdir github
- 1070  cd github/
- 1071  git init
- 1072  git clone https://github.com/arefin932/test.git
- 1073  eval "$(ssh-agent -s)"
- 1074  ssh-add ~/.ssh/id_rsa
- 1075  git clone https://github.com/arefin932/test.git
- 1076  cd ~/.ssh/
- 1077  ls
- 1078  vi id_rsa
- 1079  cat /dev/null > id_rsa.pub 
- 1080  cat id_rsa.pub 
- 1081  ssh-keygen -t rsa -b 4096 -C "arefin.hossain@gmail.com"
- 1082  eval "$(ssh-agent -s)"
- 1083  ssh-add ~/.ssh/id_rsa
- 1084  clear
- 1085  cat id_rsa.pub 
- 1086  cd ~/workspace/
- 1087  ls
- 1088  cd github/
- 1089  git clone https://github.com/arefin932/test.git
- 1090  cd test/
- 1091  git add .
- 1092  git commit -m "Added 2.py"
- 1093  git push origin
- 1094  systemctl restart sshd.service 
- 1095* 
- 1096  systemctl status sshd.service 
- 1097  eval "$(ssh-agent -s)"
- 1098  ssh-add ~/.ssh/id_rsa
- 1099  git push origin
- 1100  git remote -v
- 1101  git remote set-url origin https://github.com/arefin932/test.git
- 1102  git push origin
- 1103  git clone https://github.com/arefin932/test.git
- 1104  git clone git@github.com:arefin932/test.git
- 1105  git push origin
- 1106  cd ..
- 1107  ls
- 1108  cd ..
- 1109  ls
- 1110  rm -rf github/
- 1111  mkdir github
- 1112  cd github/
- 1113  git init
- 1114  git clone git@github.com:arefin932/test.git
+#ssh-add ~/.ssh/id_rsa
+
+Now Let's clone an existing Repository using SSH. 
+***** Note that ssh and https urls are different when you access git server.
+
+# git clone git@github.com:arefin932/test.git
+
 
