@@ -22,8 +22,8 @@ Then, the user pushed the changes to the Git server.
 ====================================================
 $ git push origin
 
-======================= GITHUB - RSA Passwordless access setup ============================
- 
+##################################   GITHUB - Setup SSH RSA public/private key Passwordless access setup ####################################
+
  At first create a rsa public/private key pair for your PC
  # ssh-keygen -t rsa -b 4096 -C "arefin.hossain@gmail.com"
  
@@ -39,4 +39,32 @@ Now Let's clone an existing Repository using SSH.
 
 # git clone git@github.com:arefin932/test.git
 
+##################### Create a local project and upload to a GIT Reposiroty ######################
 
+In this example we will create a local repository named "kb" for a project and then upload that repository to github. 
+
+Create project directory.
+
+# mkdir kb
+
+Get into the project directory
+# cd kb/
+
+Initialize the git project.
+# git init
+
+Add project files.
+# git add .
+
+Commit changes
+# git commit -m "Intial Commit"
+
+At this point, we have to log into github and create a empty repository named kb. Once the kb repository is created in github we can add it as the origin for the
+local kb project.It sets the new remote.
+# git remote add origin git@github.com:arefin932/kb.git
+
+Verify the new remote URL
+# git remote -v
+
+Push your local project to github
+# git push --set-upstream origin master
