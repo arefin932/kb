@@ -1,0 +1,31 @@
+
+# Cloning a remote repository from Github to local PC
+
+At first you have to be in the working root directory of your project. 
+
+[arefin@fedora webapp01]$ git clone git@github.com:arefin932/webapp01.git
+
+
+# Adding files to your repository
+
+After adding files to your project you have to add those files to git repository followed by a commit.
+
+[arefin@fedora webapp01]$ git add .
+[arefin@fedora webapp01]$ git commit -m "Added new files"
+
+
+# Remove files
+
+After removing files to your project you have to remove those files from git repository followed by a commit.
+
+[arefin@fedora webapp01]$ git rm file_to_be_deleted
+[arefin@fedora webapp01]$ git commit -m "Deleted unnecessary file"
+
+
+$ Finally, Push the updated files on your PC to your remote Git repository.
+
+[arefin@fedora webapp01]$ git push origin master
+
+
+
+
