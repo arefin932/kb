@@ -1,5 +1,5 @@
 
-# Cloning a remote repository from Github to local PC
+# Cloning a remote repository from Github to your local PC.
 
 At first you have to be in the working root directory of your project. 
 
@@ -22,7 +22,7 @@ After removing files to your project you have to remove those files from git rep
 [arefin@fedora webapp01]$ git commit -m "Deleted unnecessary file"
 
 
-$ Finally, Push the updated files on your PC to your remote Git repository.
+# Finally, Push the updated files on your PC to your remote Git repository.
 
 [arefin@fedora webapp01]$ git push origin master
 
