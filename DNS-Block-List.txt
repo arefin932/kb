@@ -1,3 +1,8 @@
+# Arefin's DNS blocklist 
+
+127.0.0.1  localhost
+::1  localhost
+
 # Shield TV ad blocklist
 
 127.0.0.1 androidtvwatsonfe-pa.googleapis.com
